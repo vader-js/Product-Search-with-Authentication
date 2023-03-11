@@ -4,17 +4,22 @@
     <img src="../assets/images/headerimg.jpg" alt="">
 </div>
 <div class="login-form">
-    <LoginForm />
+<router-view />
+<span>{{$store.state.error}}</span>
 </div>
+
 </main>
   
 </template>
 
-<script>
-import LoginForm from '@/components/LoginForm.vue'
-export default {
-  components: { LoginForm },
+<script >
 
+
+export default {
+    setup() {
+     
+
+}
 }
 </script>
 
@@ -36,10 +41,17 @@ main{
     height: 28rem;
     background: #FFFFFF;
     border-radius: 24px;
-    border: 1px solid grey;
     position: absolute;
     margin: 0 auto;
     top: 65%;
     left: calc(50% - 14rem);
+}
+.login-form span{
+   text-align: center;
+   margin-bottom: 5px;
+   margin-right: px;
+   font-family: Comic Sans MS, Comic Sans, cursive;;
+   color: red;
+   float: right;
 }
 </style>
