@@ -43,6 +43,7 @@ export default {
     const store = useStore();
     const register_form = ref({});
     const register = () => {
+      store.dispatch("fetchLoading", true);
       store.dispatch("register", register_form.value);
     };
     return { register_form, register };
@@ -52,7 +53,7 @@ export default {
 
 <style scoped>
 main {
-  padding: 15px;
+  padding: 15px 15px 5px 15px;
   font-family: Comic Sans MS, Comic Sans, cursive;
 }
 

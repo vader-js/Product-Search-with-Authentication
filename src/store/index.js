@@ -11,7 +11,7 @@ export default createStore({
     state: {
         user: null,
         error: "",
-        name: "",
+        loading: false,
     },
     mutations: {
         set_User (state, payload) {
@@ -20,13 +20,15 @@ export default createStore({
 
         clear_User (state) {
             state.user = null;
+            state.loading = false;
         },
 
         error(state, payload){
             state.error = payload;
+            state.loading = false;
         },
-        name(state, payload){
-            state.name = payload;
+        loading(state, payload){
+            state.loading = payload;
         }
 
     },
@@ -49,9 +51,10 @@ export default createStore({
                     default:
                         commit("error", "Something went wrong");
                         break;
-                }
-                return 
+                };
+               return;
             }
+          
             commit("set_User", auth.currentUser);
             router.push({name: 'home'})
         },
@@ -102,6 +105,9 @@ export default createStore({
                     router.push('/')
                   }
         })
-    }
+    },
+    fetchLoading({commit}, payload){
+        commit("loading", payload);
+    }    
 }
 });

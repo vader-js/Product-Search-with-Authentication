@@ -5,6 +5,9 @@
 </div>
 <div class="login-form">
 <router-view />
+<div v-show="$store.state.loading">
+    <img src="../assets/images/loader2.svg" alt="">
+</div>
 <span>{{$store.state.error}}</span>
 </div>
 
@@ -53,5 +56,18 @@ main{
    font-family: Comic Sans MS, Comic Sans, cursive;;
    color: red;
    float: right;
+}
+.login-form div{
+    width: 100%;
+    margin-top: 0;
+    text-align: center;
+   
+}
+.login-form img{
+    width: 30px;
+    height: 30px;
+    margin: 0 auto;
+    background: transparent;
+    object-fit: cover;
 }
 </style>

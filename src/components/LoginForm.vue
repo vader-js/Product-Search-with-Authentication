@@ -38,7 +38,8 @@ export default {
     const store = useStore();
     const login_form = ref({});
     const login = () => {
-      store.dispatch("login", login_form.value);
+      store.dispatch("fetchLoading", true);
+      store.dispatch("login", login_form.value); 
     };
     return { login_form, login };
   },
@@ -47,7 +48,7 @@ export default {
 
 <style scoped>
 main {
-  padding: 15px;
+  padding: 15px 15px 5px 15px;
   font-family: Comic Sans MS, Comic Sans, cursive;
 }
 .welcome {
