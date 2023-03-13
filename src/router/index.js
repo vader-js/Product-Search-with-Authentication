@@ -27,7 +27,22 @@ const router = createRouter({
       path: '/',
       name: 'home',
       component: HomeView,
-      meta: { requiresAuth: true }
+      meta: { requiresAuth: true },
+      children: [
+        {
+          path:'',
+          name: 'products',
+          component: () => import("../components/ProductSearch.vue")
+        },
+        {
+          path: '/product/:id',
+          name: 'product',
+          component: () => import("../components/Product.vue")
+        }
+      ]
+    },
+    {
+      path: "/:catchAll(.*)",
     }
    
   ]
