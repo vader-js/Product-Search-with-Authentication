@@ -38,6 +38,11 @@ const router = createRouter({
           path: '/product/:title',
           name: 'product',
           component: () => import("../components/Product.vue")
+        },
+        {
+          path: "/userDetails",
+          name: "userDetails",
+          component: () => import("../views/UserDetails.vue")
         }
       ]
     },
@@ -45,7 +50,7 @@ const router = createRouter({
       path: "/:catchAll(.*)",
       name: "ErrorPage",
       component: () => import("../views/ErrorPage.vue")
-    }
+    },
    
   ]
  

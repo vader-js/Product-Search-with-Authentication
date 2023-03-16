@@ -58,4 +58,9 @@ main{
     font-weight: 700;
     color: gold;
 }
+@media screen and (max-width: 1200px){
+  main{
+    flex-direction: column;
+  }
+}
 </style>

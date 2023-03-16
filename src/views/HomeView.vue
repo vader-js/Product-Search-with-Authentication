@@ -7,14 +7,23 @@ export default {
 
 <template>
   <main>
+    <div class="mobilehead">
+      Vader's Product Search
+    </div>
     <div class="top">
       <img src="../assets/images/productimg.jpg" alt="">
       <span class="title">Vader's Product Search</span>
     </div>
     <div class="body">
-      <button> <router-link to="" class="link"> User Details</router-link> </button>
+      <span class="setails">
+        <button> <router-link :to="{name: 'userDetails'}" class="link"> User Details</router-link> </button>
+      </span>
+      
      <router-view />
-    <button @click="$store.dispatch('logout')">Logout</button>
+     <span class="logout">
+       <button @click="$store.dispatch('logout')">Logout</button>
+     </span>
+   
     </div> 
   </main>
   
@@ -28,6 +37,9 @@ main {
   overflow: hidden;
   width: 100%;
   height: 100vh;
+}
+.mobilehead{
+  display: none;
 }
 .top{
     width: 100%;
@@ -60,10 +72,18 @@ main {
   flex-direction: column;
   align-content: center;
 }
+.body span{
+  width: 100%;
+  height: 100%;
+  flex: 0.2;
+}
+
+.logout{
+  text-align: end;
+}
 .body button{
- align-self: flex-end;
  width: 6rem;
- padding: 3px;
+ height: 2.5rem;
  font-family: inherit;
  font-size: 1.2rem;
  margin-right: 1%;
@@ -73,7 +93,6 @@ main {
   background: #343a40;
   transition: 0.3s;
   color: aliceblue;
-  flex: 0.5;
 }
 .body button:hover{
   background: #6c757d;
@@ -81,13 +100,30 @@ main {
 }
 .body button:nth-child(1){
   width: 10rem;
-  padding: 4px;
+  padding: 2px;
   margin-bottom: 2%;
-  align-self: flex-start;
 }
 
 .link{
   color: inherit;
   text-decoration: none;
+}
+
+@media screen and (max-width: 450px){
+  main{
+    flex-direction: column;
+  }
+  .top{
+    display: none;
+  }
+  .mobilehead{
+    display: block;
+    width: 100%;
+    color: aliceblue;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 1% 0 0 0;
+  }
+
 }
 </style>

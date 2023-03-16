@@ -70,4 +70,19 @@ main{
     background: transparent;
     object-fit: cover;
 }
+
+@media screen and (max-width: 450px) {
+    .loginimg{
+        width: 100%;
+        height: 30vh;
+    }
+    .login-form {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        top: 0;
+        left: 0;
+        border-radius: 0;
+    }
+}
 </style>

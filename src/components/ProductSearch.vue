@@ -34,7 +34,7 @@ export default {
               :to="{
                 name: 'product',
                 params: { title: product.title },
-                query: {image: product.thumbnail, price: product.price,
+                query: {image: product.images[0], price: product.price,
                 description: product.description, category: product.category,
                 rating: product.rating},
               }"
@@ -58,13 +58,13 @@ section {
   /* border: 1px solid white; */
   display: flex;
   width: 100%;
-  max-height: 85%;
+  max-height: 80%;
   flex-direction: column;
   align-content: center;
   flex: 9;
 }
 .search-result {
-  height: 100%;
+  height: 90%;
   position: relative;
   overflow-y: scroll;
 }
@@ -101,8 +101,12 @@ section {
 }
 .result li {
   text-align: center;
-  color: aliceblue;
+  color: #bbbbbb;
   cursor: pointer;
+  transition: 0.3s;
+}
+.result li:hover{
+    color: aliceblue;
 }
 .loader,
 .alt {
@@ -124,4 +128,11 @@ section {
   color: inherit;
   text-decoration: none;
 }
+@media  screen and (max-width: 450px) {
+    section{
+        max-height: 78%;
+    }
+}
+    
+
 </style>
