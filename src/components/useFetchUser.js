@@ -7,4 +7,5 @@ function user(){
     const password = ref(store.state.user.providerId);
   return {email, password}  
 }
+
 export default user;
