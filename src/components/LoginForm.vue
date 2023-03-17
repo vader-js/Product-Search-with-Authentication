@@ -49,7 +49,7 @@ export default {
 <style scoped>
 main {
   padding: 15px 15px 5px 15px;
-  font-family: Comic Sans MS, Comic Sans, cursive;
+  font-family: Comic Sans MS, Comic Sans, sans-serif;
 }
 .welcome {
   margin-bottom: 1rem;

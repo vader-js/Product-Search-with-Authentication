@@ -30,7 +30,7 @@ export default {
 </template>
 <style scoped>
 main {
-  font-family: Comic Sans MS, Comic Sans, cursive;
+  font-family: Comic Sans MS, Comic Sans, sans-serif;
   display: flex;
   justify-content: space-between;
   background: rgb(17, 27, 27);
