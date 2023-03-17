@@ -1,29 +1,20 @@
-# AuthProduct
+# ProductAuth Project
 
-This template should help get you started developing with Vue 3 in Vite.
+## A simple app for product search written with vue and having firebase authentication
 
-## Recommended IDE Setup
+# Description
+This project was born as a choice from series of project designed by AltSchool in order to test my knowledge on:
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+- API fetch
+    - consuming API client
+- firebase authentication
+- Vue routes
+    - Nested routes
+    - Routh guards
+- Vuex
 
-## Customize configuration
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
 
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
+# Hosting Link
+This project is Hosted on Netlify, and can be visited here: [Vader's Github Portfolio App](https://vaders-github-portfolio.netlify.app/ "may the force be with you!")
+    
