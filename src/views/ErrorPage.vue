@@ -21,6 +21,6 @@ ul{
     text-align: start;
     margin-top: 5%;
     margin-left: 3%;
-    font-family: Comic Sans MS, Comic Sans, cursive;
+    font-family: inherit;
 }
 </style>

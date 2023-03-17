@@ -23,7 +23,7 @@ setup(){
 <style scoped>
 section{
    flex: 9;
-   font-family: Comic Sans MS, Comic Sans, cursive;
+   font-family: inherit;
    color: #ccc;
 }
 section span{

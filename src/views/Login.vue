@@ -53,7 +53,6 @@ main{
    text-align: center;
    margin-bottom: 5px;
    margin-right: px;
-   font-family: Comic Sans MS, Comic Sans, cursive;;
    color: red;
    float: right;
 }
