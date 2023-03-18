@@ -54,9 +54,6 @@ export default createStore({
                 };
                return;
             }
-            console.log(auth.currentUser)
-            console.log(auth.currentUser.email)
-            console.log(auth.currentUser.password)
             commit("set_User", auth.currentUser);
             router.push("/")
         },
