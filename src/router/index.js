@@ -56,7 +56,7 @@ const router = createRouter({
  
 })
 
-router.beforeEach((to, from, next) => {
+router.beforeEach((to, next) => {
   if (to.path === '/login' && auth.currentUser) {
     next('/')
   } else if (to.matched.some(record => record.meta.requiresAuth) && !auth.currentUser) {
